@@ -593,11 +593,6 @@ nav{
         margin: 0 auto;
     }
 
-
-    .product-list li{
-        width:50%;
-    }
-
     .card-product p, .card-product h4{
         text-align: left;
     }
