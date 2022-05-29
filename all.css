@@ -481,6 +481,8 @@ nav{
 }
 
 
+
+
 .card-product{
     max-width:230px;
     margin-bottom: 28px;
@@ -563,6 +565,15 @@ nav{
     font-size: 18px;
 }
 
+@media(max-width:992px){
+
+    
+    .productintro{
+        margin-left: 40px;
+    }
+}
+
+
 @media(max-width:767px){
 
     .wrap-3{
@@ -583,6 +594,9 @@ nav{
     }
 
 
+    .product-list li{
+        width:50%;
+    }
 
     .card-product p, .card-product h4{
         text-align: left;
@@ -595,6 +609,8 @@ nav{
 @media(max-width:576px){
     .product-list{
         flex-direction: column;
+        width: 100%;
+        align-items: center;
     }
 
 }
