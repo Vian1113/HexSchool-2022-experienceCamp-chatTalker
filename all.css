@@ -1,0 +1,1185 @@
+html{
+    font-family: 'Noto Sans TC', sans-serif;
+    
+}
+
+
+*,*:before,*:after{
+    box-sizing:border-box;
+}
+
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+sub{
+    vertical-align: sub;
+}
+
+/* 第一頁樣式 */
+
+
+/* 背景圖與圓球區塊 */
+
+.container{
+    position: relative;
+    margin: 0 auto;
+    height:100vh;
+    
+}
+
+
+
+.bg-img{
+    position: absolute;
+    background-image:url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/bg_home.svg"
+    );
+    background-repeat: no-repeat;
+    background-size:contain;
+    top:0px;
+    right:0px;
+    z-index:-999;
+    width:800px;
+    height:768px;
+}
+
+
+
+.bg-ball-g{
+    position: absolute; 
+    top:calc(100vh - 50px);
+    bottom:0; 
+    width:100px;
+    height:360px;
+    background-image:url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball01.svg"
+    );
+    background-position:right;
+    z-index: -100; 
+
+    
+}
+
+.bg-ball-lg{
+    position: absolute;
+    top:1480px;
+    right:0px;
+    background-image:url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball02.svg"
+    );
+    background-repeat: no-repeat;
+    width:200px;
+    height:320px;
+    z-index: -100;
+    
+}
+
+.bg-ball-y{
+    position: absolute;
+    background-image:url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball03.svg"
+    );
+    background-repeat: no-repeat;
+    background-size: 65%;
+    top:2383px;
+    left:83px;
+    width:160px;
+    height:160px;
+    z-index:-100;
+   
+} 
+
+@media(max-width:767px){
+    
+    .bg-img{
+        display: none;
+    }
+
+    .bg-ball-g{
+        width:50px;
+        height:180px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position:right;
+        z-index: -100;
+        left:0;
+        
+    }
+
+}
+
+
+
+
+/* Go To Top 按鈕 */
+.click-btn{
+    display: block;
+    max-width:71px;
+    position: fixed;
+    bottom:10px;
+    right:16px;
+    z-index:100;
+    
+}
+
+
+
+
+/* header區塊 */
+header{
+   
+    max-width:1120px;
+    margin: 0 auto;
+    padding-right: 16px;
+    padding-left: 16px;
+    
+}
+
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+
+.logo a{
+    display: block;
+    width:200.44px;
+    margin: 24px 0px 24px 0px;
+    
+}
+
+.header-btn{
+    border-radius: 22px;
+    background:#FF5D50;
+    padding:8px 32px;
+    line-height: 24px;
+    text-align: center;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.header-btn:hover{
+    background:#fff;;
+    color: #FF5D50;
+    border:#FF5D50 1px solid;
+
+}
+
+@media(max-width:767px){
+    
+   
+    header{
+        position:fixed;
+        top:0;
+        right: 0;
+        left: 0;
+        background: #FFFFFF;
+        border-bottom: 3px solid #FFD153;
+        z-index:100
+
+    }
+
+}
+
+
+/* 首頁banner */
+.banner{
+    display: flex;
+    max-width:1120px;
+    margin: 0 auto;
+    justify-content: space-between; 
+    align-items: center; 
+    padding-right: 16px;
+    padding-left: 16px;
+    
+}
+.banner-img{
+    max-width:532px;
+    width:50%;
+}
+
+
+
+.banner-intro{
+    text-align: left;
+    width:50%;
+    letter-spacing: 0;
+}
+.banner-intro h2{
+    color: #56c4c5;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 26px;
+
+}
+.banner-intro h3{
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 70px;
+    color: #221E1F;
+    
+}
+.banner-intro p{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 29px;
+    color: #221E1F;
+    
+}
+
+@media(max-width:767px){
+    .banner{
+        flex-direction: column;
+        margin-top: 130px;
+        
+
+    }
+    .banner-img{
+        width:55%;
+        background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/bg_home_sm.svg);
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        background-size: 95%;
+    }
+
+    .banner-intro{
+        width:100%;
+    }
+    .banner-img{
+        width: 100%;
+    }
+    
+}
+
+
+
+
+/* 主內容區 */
+
+.main{
+    max-width:1120px;
+    margin: 0 auto;
+    padding-right: 16px;
+    padding-left: 16px;
+
+   
+}
+
+.main h3{
+    font-size: 32px;
+    line-height: 46px;
+    font-weight: bold;
+    text-align: center;
+}
+.main h4{
+    font-size: 24px;
+    line-height: 35px;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.main p{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: normal;
+    text-align: center;
+}
+
+@media(max-width:767px){
+.main{
+    margin-top: 80px;
+}
+
+
+
+
+}
+
+
+/* 「三大平台我來搞定」區塊 */
+.wrap-1{
+    max-width: 969px;
+    margin: 0 auto;
+}
+
+
+
+.media-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.media-list li{
+    width:33%;
+}
+
+.card-media{
+   
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+    justify-content: space-around; 
+    align-items: center; 
+}
+
+.media-list .card-media p{
+    color:#747474;
+}
+
+
+
+.social-icon{
+    
+    max-width:90px;
+    height: 90px;
+    width:100%;
+    margin-top: 48px;
+    margin-bottom: 24px;
+}
+
+.card-media h4{
+    padding-bottom: 24px;
+}
+
+@media(max-width:767px){
+    .media-list{
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    .media-list li{
+        width:100%;
+    }
+
+}
+
+
+
+/* 「任何的角色，我都能給」區塊 */
+
+.wrap-2{
+    margin: 100px 0;
+    text-align: center;
+
+}
+
+.wrap-2 h4{
+    font-size: 20px;
+    line-height: 29px;
+    font-weight: normal;
+    padding-top: 16px;
+    padding-bottom: 48px;
+
+}
+
+.role-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap:16px;
+    justify-content: center;
+    
+}
+
+.card-role{
+    min-height:388px;
+    width:23%;
+    box-shadow: 0px 2px 10px #00000014;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    
+
+}
+
+.role{
+    max-width:260px;
+    width:100%;
+    border-radius: 12px 12px 0px 0px;
+    
+}
+.description .subtitle{
+    color:#56C4C5;
+    padding: 16px 0;
+    font-weight: bold;
+
+}
+
+.description p{
+    padding:16px 16px 24px;
+}
+
+@media(max-width:992px){
+
+    .role-list{
+        justify-content: space-around;
+        align-items: stretch;
+    }
+    .card-role{
+        width:45%;
+        margin-bottom: 5%;
+    }
+
+    .role{
+        max-width:100%;
+        vertical-align:middle;
+        
+
+    }
+
+}
+
+
+
+@media(max-width:767px){
+    .role-list{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:24px;
+    }
+    
+    
+    .card-role{
+        width:65%;
+        margin:0 auto;
+    }
+    
+
+}
+
+/* 產品介紹區塊 */
+.wrap-3{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    
+
+}
+
+.product-list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between; 
+    max-width: 507px;
+    width: 100%;
+    margin-bottom: -28px;
+    
+    
+}
+
+
+.card-product{
+    max-width:230px;
+    margin-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 2px 10px #00000014;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+
+}
+
+.product{
+    width: 86px;
+    height: 86px;
+    align-self: center;
+    box-shadow:0px 2px 10px #00000014;
+    border-radius: 99px;
+    padding: 17px;
+    margin:32px 112px 24px 32px;
+
+}
+
+
+.card-product h4{
+    padding-bottom: 16px;
+    padding-left: 32px;
+    text-align: left;
+    font-size: 18px;
+    line-height: 26px;
+}
+.card-product p{
+    padding-bottom: 48px;
+    padding-left:32px;
+    text-align: left;
+}  
+
+
+.productintro{
+    margin-left: 137px;
+    
+}
+.productintro h3{
+    padding-bottom: 16px;
+    text-align: left;
+    
+
+}
+
+.productintro p{
+    font-size: 18px;
+    line-height: 26px;
+    padding-bottom: 24px;
+    text-align: left;
+    
+}
+
+.plan-btn{
+    display: block;;
+    padding: 11.5px 32px 11.5px 32px;
+    color:#FFFFFF;
+    background-color: #56C4C5;
+    border: 1px solid #56C4C5;
+    border-radius: 27px;
+    width: 138px;
+    
+    
+    
+}
+
+.plan-btn:hover{
+    background-color: #FFFFFF;
+    border: 1px solid #56C4C5;
+    color:#56C4C5;
+}
+
+.plan-btn p{
+    text-align: center;
+    padding-bottom: 0px;
+    line-height: 26px;
+    font-size: 18px;
+}
+
+@media(max-width:767px){
+
+    .wrap-3{
+        flex-direction: column-reverse;
+        text-align: center;
+        
+    }
+    .productintro{
+        margin: 0 auto 32px auto;
+    }
+
+    .productintro h3,.productintro p{
+        text-align: center;
+    }
+
+    .plan-btn{
+        margin: 0 auto;
+    }
+
+
+
+    .card-product p, .card-product h4{
+        text-align: left;
+    }
+    
+
+}
+
+
+@media(max-width:576px){
+    .product-list{
+        flex-direction: column;
+    }
+
+}
+
+
+
+/* 「好評如潮」區塊 */
+.wrap-4{
+    margin:100px 0px 100px 0px;
+    
+}
+
+.wrap-4 h3{
+    margin-bottom: 48px;
+}
+.review{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+}
+.review li{
+    width:33%;
+    
+   
+}
+
+.card-review{
+    position: relative; 
+    background-color: #FFFFFF;
+    
+    
+
+}
+
+.customer{
+    max-width:80px;
+    height:80px;
+    box-shadow: 0px 2px 10px #00000014;
+    border-radius: 99px;
+    position: absolute;
+    left:32px;
+    top:-38px;
+
+   
+}
+
+.review-text{
+    box-shadow: 0px 2px 10px #00000014;
+    border-radius: 12px;
+    max-width: 352px;
+    padding: 48px 32px 24px 32px; 
+    min-height:248px;
+    
+
+}
+
+.review-text p{
+    text-align: left;
+    padding-bottom: 24px;
+    
+
+}
+
+hr{
+    margin:0px
+}
+.review-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    
+}
+.review-info .company .name{
+    text-align: left;
+    font-weight: bold;
+    padding-bottom: 8px;
+    
+}
+
+.review-info .company .jobtitle{
+    font-weight: normal;
+    padding-bottom: 24px;
+    
+}
+
+.rank{
+    max-width:113.2px;
+    display: flex;
+    padding-right: 8px;
+    line-height: 24px;
+  
+}
+.rank img{
+    max-width:16px;
+    margin-right: 8px;
+
+}
+
+@media(max-width:767px){
+.review{
+    display: flex;
+    flex-wrap: wrap; 
+   
+
+}
+
+.review li{
+    width:100%;
+    margin-bottom: 16px;
+}
+
+.card-review{
+    position: relative;
+    margin-bottom: 80px;
+}
+.review-text{
+    margin: 0px auto 0px auto;
+}
+
+
+.customer{
+   position: absolute;
+   left:220px;
+   top:-36px;
+   z-index:5;
+}
+
+}
+
+
+.page{
+    max-width:70px;
+    display: flex;
+    margin: 0 auto;
+    gap:8px;
+    
+    
+}
+
+
+
+.page-icon{
+    display: block;
+    width:10px;
+    height:10px;
+    border-radius: 99px;
+    background-color: #DDDDDD;
+    
+    
+}
+.page-icon:hover{
+    background-color: #FFD153;
+}
+.page-current{
+    width: 16px;
+    background-color: #FFD153;
+
+}
+
+/* 頁尾區塊 */
+
+footer{
+    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/home_footer.svg" )  no-repeat  center center/cover;
+    min-height:503px;
+    
+}
+
+
+.text-area{
+    padding-top:350px;
+    
+}
+.text-area h3{
+    font-size: 32px;
+    line-height: 46px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom:48px;
+    
+     
+}
+
+.text-area .plan-btn{
+    display: block;
+    margin:0 auto;
+
+}
+
+
+
+.copyright{
+   
+    text-align: center;
+    background-color: #F5F5F5;
+    margin-top: 100px;
+   
+}
+
+.copyright p{
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+/* 第二頁樣式 */
+
+
+/* 計費方式banner */
+.price-bg-img{ 
+    position: absolute;
+    background-image:url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/banner.svg);
+    background-repeat: no-repeat;
+    top:0px;
+    right:0px;
+    z-index:-5;
+    width:860px;
+    height:559px; 
+    
+}
+
+.bg-box{
+    position: absolute;
+    min-height: 470px; 
+    width:100%;
+    background: #F7F9FD 0% 0% no-repeat;
+    border-radius: 0px 0px 0px 300px;
+    top: -80px;
+    right: 0px;
+    min-height:550px; 
+    z-index:-999;
+
+}
+
+@media(max-width:767px){
+    
+    .price-bg-img{ 
+        background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/banner_sm.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: -280px;
+        right: 0px;
+        z-index: -5;
+        width: 759px;
+        height: 999px;
+    
+        
+    }
+    
+   .bg-box{
+       width:95%;
+       min-height:739px
+   }
+   
+}
+
+
+
+
+.bg-ball-org{
+    position: absolute;
+    background-image:url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball03.svg"
+    );
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 300%;
+    top:800px;
+    left:0px;
+    width:70px;
+    height:361px;
+    z-index:-999;
+    
+
+}
+
+
+
+/* 方案內容 */
+.price-banner{
+    max-width:1120px;
+    margin: 92px auto 180px;
+    padding-right: 16px;
+    padding-left: 16px;
+}
+
+.price-banner-intro h2{
+    font-size: 48px;
+    line-height: 70px;
+    font-weight: bold;
+ 
+
+}
+
+.price-banner-intro p{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight:normal;
+    padding-top: 16px;
+
+}
+
+
+.content{
+
+    max-width: 909px;
+    margin: 0 auto;
+    
+    
+}
+
+.content h3{
+    font-size: 32px;
+    line-height: 46px;
+    font-weight:bold;
+    text-align: center;
+    padding-top: 100px;
+
+}
+
+.plans-btn{
+    margin: 48px 16px 0;
+    display: flex;
+    justify-content: center;
+    gap:16px
+
+}
+
+.plans-btn a:not(:first-child):hover{
+    background-color:#56C4C5;
+    color:#FFFFFF;
+
+}
+
+.plans-btn a{
+    
+    display: block;
+    padding: 12px 32px 12px 32px;
+    border: 1px solid #56C4C5;
+    border-radius: 27px;
+    color:#56C4C5;
+    text-align: center;
+    white-space: nowrap;
+}
+
+
+.plans-btn .selected{
+    background-color:#56C4C5;
+    color:#FFFFFF;
+}
+
+.plans{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 54px;
+}
+
+.basic,.standard{
+    width:calc(50% - 10px);
+    text-align: center;
+    box-shadow: 0px 2px 10px #00000014;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+
+}
+
+
+.plan-hr{
+    width:100%;
+    margin-bottom:32px;
+    margin-top: 16px;
+    
+    border:0;
+    border-top:1px solid #DDDDDD;
+    
+}
+.plans h4{
+    font-size: 24px;
+    line-height: 35px;
+    font-weight:bold;
+    margin-top: 10px;
+}
+
+.plan p{
+    font-size: 16px;
+    line-height: 24px;
+   
+}
+
+.count{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 32px;
+
+}
+
+.count-area{
+    max-width:169px;
+    background-color: #F5F5F5;
+    border-radius: 12px;
+    white-space: nowrap;
+}
+
+.count-area .subtitle{
+    font-size: 12px;
+    line-height: 17px;
+    padding:24px 55px 8px 54px;
+    text-align: center;
+}
+
+.count-area .unit{
+    font-size: 32px;
+    line-height: 35px;
+    text-align: left;
+    color:#56C4C5;
+    padding: 0px 8px 24px 32px;
+}
+
+.count-area .unit span{
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+   
+}
+
+.count-area .total{
+    padding:24px 43px 8px 42px;
+}
+
+.count-area .price{
+    color:#221E1F;
+    padding: 0px 8px 24px 39px;
+}
+
+.count .equal{
+    font-size: 29px;
+    line-height: 42px;
+    text-align: center;
+    
+}
+
+
+
+
+.plan-advantage{
+    margin-left: 29px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+.plan-advantage li{
+    display: flex;
+    margin-bottom: 16px;
+
+}
+.plan-advantage img{
+    margin-right: 12px;
+}
+
+.trybtn{
+    display: block;
+    max-width:138px;
+    color: #FFFFFF;
+    padding:12px 32px;
+    background-color: #56C4C5;
+    border: 1px solid #56C4C5;
+    border-radius: 27px;
+    margin :0 auto 32px auto;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.trybtn:hover{
+    background-color: #FFFFFF;
+    border: 1px solid #56C4C5;
+    color: #56C4C5;
+
+
+}
+
+@media(max-width:992px){
+   .basic,.standard{
+       width:94%;
+   }
+   
+
+   .plans{
+        flex-wrap:wrap;
+        flex-direction: column;
+        align-items: center;
+        gap:24px;
+   }
+
+   .plan-advantage{
+       width:60%;
+       margin: 32px auto;
+   }
+
+   .faq{
+       width:94%;
+   }
+
+
+}
+
+@media(max-width:767px){
+    .plans-btn{
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x:scroll;
+    }
+
+    .price-banner{
+        min-height:495px;
+    
+    }
+
+    .price-banner-intro h2{
+        padding-top: 92px; 
+    }
+
+   
+
+
+
+}
+
+
+
+/* 常見問題 */
+.faq{
+    max-width: 909px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.faq li{
+    margin-bottom: 16px;
+}
+
+.faq h3{
+    font-size: 32px;
+    line-height: 46px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0px auto 48px auto;
+
+}
+
+.faq h5{
+    font-size: 18px;
+    line-height: 28px;
+    
+
+}
+.select-q{
+    color:#56C4C5;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.list p{
+    font-size: 16px;
+    line-height: 32px;
+    color:#747474;
+}
+
+.list{
+    display: flex;
+    padding:16px 32px;
+    justify-content: space-between;
+    box-shadow: 0px 2px 10px #00000014;
+    border-radius: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
